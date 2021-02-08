@@ -1,0 +1,44 @@
+﻿@page
+@model PrototypeProject.Pages.Warehouse.WRemoveModel
+@{
+}
+<h2>Delete</h2>
+
+<h1>:: Delete Customer Page ::</h1>
+
+<h2 class="text-danger">Are you sure want to delete the record?</h2>
+
+<div class="table-active">
+
+    <div>
+        <label asp-for="Stock.Id"></label>
+        <span> : </span>
+        @Model.Stock.Id
+    </div>
+
+    <div>
+        <label asp-for="Stock.Title"></label>
+        <span> : </span>
+        @Model.Stock.Title
+    </div>
+
+    <div>
+        <label asp-for="Stock.Count"></label>
+        <span> : </span>
+        @Model.Stock.Count
+    </div>
+
+    <div>
+        <label asp-for="Stock.Price"></label>
+        <span> : </span>
+        @Model.Stock.Price
+    </div>
+
+</div>
+<br />
+<div>
+    <form method="post">
+        <input type="hidden" asp-for="Stock.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+    </form>
+</div>

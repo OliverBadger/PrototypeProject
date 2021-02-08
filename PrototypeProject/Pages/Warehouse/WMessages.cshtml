@@ -1,0 +1,39 @@
+﻿@page
+@model PrototypeProject.Pages.Warehouse.WMessagesModel
+@{
+}
+<div>
+    <div>
+        <form method="post">
+            <div>
+                <input type="submit" value="Add" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    <table class="table table-active">
+        <thead>
+            <tr>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Message[0].FirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Message[0].LastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Message[0].Message)
+                </th>
+            </tr>
+        </thead>
+
+
+        @for (int i = 0; i < Model.Message.Count; i++)
+        {
+            <tr>
+                <td>@Model.Message[i].FirstName</td>
+                <td>@Model.Message[i].LastName</td>
+                <td>@Model.Message[i].Message</td>
+            </tr>
+        }
+    </table>
+</div>

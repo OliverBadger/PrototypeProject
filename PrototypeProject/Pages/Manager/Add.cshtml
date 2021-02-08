@@ -1,0 +1,37 @@
+﻿@page
+@model PrototypeProject.Pages.Manager.AddModel
+@{
+}
+<h2>Create</h2>
+
+<h4>Admin</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Stock.Title" class="control-label"></label>
+                <input asp-for="Stock.Title" class="form-control" />
+                <span asp-validation-for="Stock.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Stock.Count" class="control-label"></label>
+                <input asp-for="Stock.Count" class="form-control" />
+                <span asp-validation-for="Stock.Count" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Stock.Price" class="control-label"></label>
+                <input asp-for="Stock.Price" class="form-control" />
+                <span asp-validation-for="Stock.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
