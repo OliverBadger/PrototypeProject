@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Data\Master Database.ldf" />
+    <None Remove="Data\Master Database.mdf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Data\" />
   </ItemGroup>
 
