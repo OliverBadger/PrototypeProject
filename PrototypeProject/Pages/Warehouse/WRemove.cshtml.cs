@@ -58,7 +58,7 @@ namespace PrototypeProject.Pages.Warehouse
                 command.ExecuteNonQuery();
             }
             conn.Close();
-            return RedirectToPage("/Manager/View");
+            return RedirectToPage("/Warehouse/WView");
         }
     }
 }

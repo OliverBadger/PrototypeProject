@@ -9,8 +9,9 @@ namespace PrototypeProject.Pages
     {
         public string DatabaseString()
         {
-            string DbString = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=MasterDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            string DbString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Oliver\Desktop\Uni Documents\Semester 2 Project\PrototypeProject\PrototypeProject\Data\MasterDB.mdf;Integrated Security=True";
             return DbString;
+
         }
     }
 }

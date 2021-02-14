@@ -54,7 +54,7 @@ namespace PrototypeProject.Pages.Login
 
                 if (Login.Department == "Warehouse")
                 {
-                    return RedirectToPage("/Warehouse/WView");
+                    return RedirectToPage("/Warehouse/WIndex");
                 }
                 else if (Login.Department == "Manager")
                 {

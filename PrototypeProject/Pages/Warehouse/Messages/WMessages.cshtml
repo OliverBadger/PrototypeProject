@@ -3,6 +3,9 @@
 @{
 }
 <div>
+    <div class="col-sm-2">
+        <p><a asp-page="/Warehouse/WIndex">Return To Homepage</a></p>
+    </div>
     <div>
         <form method="post">
             <div>
@@ -23,17 +26,23 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Message[0].Message)
                 </th>
+                <th>
+                    Actions
+                </th>
             </tr>
         </thead>
 
-
-        @for (int i = 0; i < Model.Message.Count; i++)
+         
+       @for (int i = 0; i < Model.Message.Count; i++)
         {
-            <tr>
-                <td>@Model.Message[i].FirstName</td>
-                <td>@Model.Message[i].LastName</td>
-                <td>@Model.Message[i].Message</td>
-            </tr>
+        <tr>
+        <td>@Model.Message[i].FirstName</td>
+        <td>@Model.Message[i].LastName</td>
+        <td>@Model.Message[i].Message</td>
+        <td>
+            <a asp-page="/Warehouse/Messages/WMessagesDelete" asp-route-id="@Model.Message[i].Id">Remove</a>
+        </td>
+        </tr>
         }
     </table>
 </div>

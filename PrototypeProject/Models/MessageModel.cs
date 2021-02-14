@@ -15,6 +15,8 @@ namespace PrototypeProject.Models
         [BindProperty]
         public string LastName { get; set; }
         [BindProperty]
+        public string Department { get; set; }
+        [BindProperty]
         public string Message { get; set; }
     }
 }
