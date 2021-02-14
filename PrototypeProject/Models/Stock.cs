@@ -16,5 +16,10 @@ namespace PrototypeProject.Models
         public int Id { get; set; }
         [BindProperty]
         public int Count { get; set; }
+
+        public static implicit operator Stock(List<Stock> v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

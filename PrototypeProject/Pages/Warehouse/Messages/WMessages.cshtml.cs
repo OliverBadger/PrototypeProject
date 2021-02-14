@@ -31,26 +31,24 @@ namespace PrototypeProject.Pages.Warehouse
 				SqlDataReader reader = command.ExecuteReader(); //SqlDataReader is used to read record from a table
 
 				Message = new List<MessageModel>(); //this object of list is created to populate all records from the table
+				Department = new MessageModel();
+
 				while (reader.Read())
 				{
 					Department.Department = reader.GetString(3);
 					if (Department.Department == "Manager")
 					{
-						while (reader.Read())
+						MessageModel record = new MessageModel
 						{
-							MessageModel record = new MessageModel
-							{
-								Id = reader.GetInt32(0), //getting the first field from the table
-								FirstName = reader.GetString(1), //getting the first field from the table
-								LastName = reader.GetString(2), //getting the second field from the table
-								Message = reader.GetString(4), //getting the third field from the table
-							}; //a local var to hold a record temporarily
-							Message.Add(record); //adding the single record into the list
-						}
-						// Call Close when done reading.
+							Id = reader.GetInt32(0), //getting the first field from the table
+							FirstName = reader.GetString(1), //getting the first field from the table
+							LastName = reader.GetString(2), //getting the second field from the table
+							Message = reader.GetString(4), //getting the third field from the table
+						}; //a local var to hold a record temporarily
+						Message.Add(record); //adding the single record into the list
 					}
-						reader.Close();
 				}
+				reader.Close();
 			}
 		}
 		public IActionResult OnPost()

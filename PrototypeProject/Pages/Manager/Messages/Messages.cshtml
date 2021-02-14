@@ -2,3 +2,47 @@
 @model PrototypeProject.Pages.Admin.MessagesModel
 @{
 }
+<div>
+    <div class="col-sm-2">
+        <p><a asp-page="/Manager/Index">Return To Homepage</a></p>
+    </div>
+    <div>
+        <form method="post">
+            <div>
+                <input type="submit" value="Add" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    <table class="table table-active">
+        <thead>
+            <tr>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Message[0].FirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Message[0].LastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Message[0].Message)
+                </th>
+                <th>
+                    Actions
+                </th>
+            </tr>
+        </thead>
+
+
+        @for (int i = 0; i < Model.Message.Count; i++)
+        {
+            <tr>
+                <td>@Model.Message[i].FirstName</td>
+                <td>@Model.Message[i].LastName</td>
+                <td>@Model.Message[i].Message</td>
+                <td>
+                    <a asp-page="/Manager/Messages/MessagesDelete" asp-route-id="@Model.Message[i].Id">Remove</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

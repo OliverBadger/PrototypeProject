@@ -58,7 +58,7 @@ namespace PrototypeProject.Pages.Login
                 }
                 else if (Login.Department == "Manager")
                 {
-                    return RedirectToPage("/Manager/View");
+                    return RedirectToPage("/Manager/Index");
                 }
                 else if (Login.Department == "Admin")
                 {

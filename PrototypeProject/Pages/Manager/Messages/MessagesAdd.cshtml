@@ -1,0 +1,39 @@
+﻿@page
+@model PrototypeProject.Pages.Manager.Messages.MessagesAddModel
+@{
+}
+<h2>Create</h2>
+
+<h4>Create Message</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Message.FirstName" class="control-label"></label>
+                <input asp-for="Message.FirstName" class="form-control" />
+                <span asp-validation-for="Message.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Message.LastName" class="control-label"></label>
+                <input asp-for="Message.LastName" class="form-control" />
+                <span asp-validation-for="Message.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Message.Message" class="control-label"></label>
+                <input asp-for="Message.Message" class="form-control" />
+                <span asp-validation-for="Message.Message" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <div>
+        <a class="btn-default" asp-area="" asp-page="/Manager/Messages/Messages">Back to List</a>
+    </div>
+</div>

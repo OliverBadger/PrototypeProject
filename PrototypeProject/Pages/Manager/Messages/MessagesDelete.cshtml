@@ -1,0 +1,50 @@
+﻿@page
+@model PrototypeProject.Pages.Manager.Messages.MessagesDeleteModel
+@{
+}
+<h2>Delete</h2>
+
+<h1>:: Delete Messages ::</h1>
+
+<h2 class="text-danger">Are you sure want to delete the record?</h2>
+
+<div class="table-active">
+
+    <div>
+        <label asp-for="Messages.Id"></label>
+        <span> : </span>
+        @Model.Messages.Id
+    </div>
+
+    <div>
+        <label asp-for="Messages.FirstName"></label>
+        <span> : </span>
+        @Model.Messages.FirstName
+    </div>
+
+    <div>
+        <label asp-for="Messages.LastName"></label>
+        <span> : </span>
+        @Model.Messages.LastName
+    </div>
+
+    <div>
+        <label asp-for="Messages.Department"></label>
+        <span> : </span>
+        @Model.Messages.Department
+    </div>
+
+    <div>
+        <label asp-for="Messages.Message"></label>
+        <span> : </span>
+        @Model.Messages.Message
+    </div>
+
+</div>
+<br />
+<div>
+    <form method="post">
+        <input type="hidden" asp-for="Messages.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+    </form>
+</div>

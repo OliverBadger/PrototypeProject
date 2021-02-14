@@ -32,7 +32,7 @@ namespace PrototypeProject.Pages.Warehouse.Messages
 
                     command.Parameters.AddWithValue("@FName", Message.FirstName);
                     command.Parameters.AddWithValue("@LName", Message.LastName);
-                    command.Parameters.AddWithValue("@Department", "Warehouse");
+                    command.Parameters.AddWithValue("@Department", "Manager");
                     command.Parameters.AddWithValue("@Message", Message.Message);
 
                     Console.WriteLine(Message.FirstName);
@@ -41,7 +41,7 @@ namespace PrototypeProject.Pages.Warehouse.Messages
 
                     command.ExecuteNonQuery();
                 }
-                return RedirectToPage("/Warehouse/Messages/WMessages");
+                return RedirectToPage("/Warehouse/Messages/Messages");
             }
         }
     }

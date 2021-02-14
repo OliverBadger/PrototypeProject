@@ -1,0 +1,19 @@
+﻿@page
+@model PrototypeProject.Pages.Manager.IndexModel
+@{
+}
+<h1>:: Customer Main Page ::</h1>
+<br />
+<h2> Welcome @Model.Name</h2>
+
+<br />
+<div class="row">
+
+    <div class="col-sm-2">
+        <p><a asp-page="/Manager/Messages/Messages">See Messages</a></p>
+    </div>
+
+    <div class="col-sm-2">
+        <p><a asp-page="/Manager/View">See Stock</a></p>
+    </div>
+</div>
