@@ -23,11 +23,11 @@ a {
     border-color: #1A4341;
 }
 
-.btn-primary:hover, .btn-primary:focus {
-    color: #0B2429;
-    background-color: #1A4341;
-    border-color: #1A4341;
-}
+    .btn-primary:hover, .btn-primary:focus {
+        color: #0B2429;
+        background-color: #1A4341;
+        border-color: #1A4341;
+    }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     color: #fff;
