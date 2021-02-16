@@ -2,18 +2,18 @@
 @model PrototypeProject.Pages.Manager.IndexModel
 @{
 }
-<h1>:: Customer Main Page ::</h1>
+<h2>:: Manager Page ::</h2>
 <br />
-<h2> Welcome @Model.Name</h2>
+<h3> Welcome @Model.Name</h3>
 
 <br />
 <div class="row">
 
     <div class="col-sm-2">
-        <p><a asp-page="/Manager/Messages/Messages">See Messages</a></p>
+        <p><a class="btn btn-primary" asp-page="/Manager/Messages/Messages">See Messages</a></p>
     </div>
 
     <div class="col-sm-2">
-        <p><a asp-page="/Manager/View">See Stock</a></p>
+        <p><a class="btn btn-primary" asp-page="/Manager/View">See Stock</a></p>
     </div>
 </div>

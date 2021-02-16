@@ -1,11 +1,11 @@
 ﻿@page
-@model PrototypeProject.Pages.Warehouse.WMessagesModel
+@model PrototypeProject.Pages.Warehouse.Messages.WSentModel
 @{
 }
 <div>
     <div>
-        <p><a class="btn btn-primary" asp-page="/Warehouse/WIndex">Return To Homepage</a></p>
-        <p><a class="btn btn-primary" asp-page="/Warehouse/Messages/WSent">View Sent Messages</a></p>
+        <p><a class="btn btn-primary" asp-page="/Warhouse/Index">Return To Homepage</a></p>
+        <p><a class="btn btn-primary" asp-page="/Warehouse/Messages/WMessages">Return To Inbox</a></p>
     </div>
     <div>
         <form method="post">
@@ -33,17 +33,17 @@
             </tr>
         </thead>
 
-         
-       @for (int i = 0; i < Model.Message.Count; i++)
+
+        @for (int i = 0; i < Model.Message.Count; i++)
         {
-        <tr>
-        <td>@Model.Message[i].FirstName</td>
-        <td>@Model.Message[i].LastName</td>
-        <td>@Model.Message[i].Message</td>
-        <td>
-            <a asp-page="/Warehouse/Messages/WMessagesDelete" asp-route-id="@Model.Message[i].Id">Remove</a>
-        </td>
-        </tr>
+            <tr>
+                <td>@Model.Message[i].FirstName</td>
+                <td>@Model.Message[i].LastName</td>
+                <td>@Model.Message[i].Message</td>
+                <td>
+                    <a asp-page="/Warehouse/Messages/WMessagesDelete" asp-route-id="@Model.Message[i].Id">Remove</a>
+                </td>
+            </tr>
         }
     </table>
 </div>

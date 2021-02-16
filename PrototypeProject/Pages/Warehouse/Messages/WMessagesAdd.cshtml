@@ -2,9 +2,9 @@
 @model PrototypeProject.Pages.Warehouse.Messages.WMessagesAddModel
 @{
 }
-<h2>Create</h2>
+<h2>:: Create ::</h2>
 
-<h4>Create Message</h4>
+<h3>Send Message To Manager</h3>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -26,7 +26,7 @@
                 <span asp-validation-for="Message.Message" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
@@ -34,6 +34,6 @@
 
 <div>
     <div>
-        <a class="btn-default" asp-area="" asp-page="/Warehouse/Messages/WMessages">Back to List</a>
+        <a class="btn btn-primary" asp-area="" asp-page="/Warehouse/Messages/WMessages">Back to List</a>
     </div>
 </div>

@@ -36,7 +36,7 @@ namespace PrototypeProject.Pages.Admin
 				while (reader.Read())
 				{
 					Department.Department = reader.GetString(3);
-					if (Department.Department == "Warehouse")
+					if (Department.Department == "Manager")
 					{
 						MessageModel record = new MessageModel
 						{
@@ -53,7 +53,7 @@ namespace PrototypeProject.Pages.Admin
 		}
 		public IActionResult OnPost()
 		{
-			return RedirectToPage("/Warehouse/Messages/WMessagesAdd");
+			return RedirectToPage("/Manager/Messages/MessagesAdd");
 		}
 	}
 }

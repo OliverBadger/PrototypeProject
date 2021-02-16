@@ -41,7 +41,7 @@ namespace PrototypeProject.Pages.Warehouse.Messages
 
                     command.ExecuteNonQuery();
                 }
-                return RedirectToPage("/Warehouse/Messages/Messages");
+                return RedirectToPage("/Warehouse/Messages/WMessages");
             }
         }
     }

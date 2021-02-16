@@ -7,10 +7,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using PrototypeProject.Models;
 
-namespace PrototypeProject.Pages.Warehouse
+namespace PrototypeProject.Pages.Warehouse.Messages
 {
-	public class WMessagesModel : PageModel
-	{
+    public class WSentModel : PageModel
+    {
 		public List<MessageModel> Message { get; set; }
 		public MessageModel Department { get; set; }
 
@@ -36,7 +36,7 @@ namespace PrototypeProject.Pages.Warehouse
 				while (reader.Read())
 				{
 					Department.Department = reader.GetString(3);
-					if (Department.Department == "Warehouse")
+					if (Department.Department == "Manager")
 					{
 						MessageModel record = new MessageModel
 						{

@@ -7,9 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using PrototypeProject.Models;
 
-namespace PrototypeProject.Pages.Warehouse
+namespace PrototypeProject.Pages.Manager.Messages
 {
-	public class WMessagesModel : PageModel
+    public class SentModel : PageModel
 	{
 		public List<MessageModel> Message { get; set; }
 		public MessageModel Department { get; set; }

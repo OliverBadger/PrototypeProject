@@ -3,17 +3,18 @@
 @{
 }
 <div>
-    <div class="col-sm-2">
-        <p><a asp-page="/Manager/Index">Return To Homepage</a></p>
+    <div>
+        <p><a class="btn btn-primary" asp-page="/Manager/Index">Return To Homepage</a></p>
+        <p><a class="btn btn-primary" asp-page="/Manager/Messages/Sent">View Sent Messages</a></p>
     </div>
     <div>
         <form method="post">
             <div>
-                <input type="submit" value="Add" class="btn btn-primary" />
+                <input type="submit" value="Send Message" class="btn btn-primary" />
             </div>
         </form>
     </div>
-    <table class="table table-active">
+    <table class="table table-active table-bordered">
         <thead>
             <tr>
 

@@ -176,7 +176,8 @@ svg {
 }
 
 table {
-  border-collapse: collapse;
+    border-collapse: collapse;
+    background-color: #1A4341;
 }
 
 caption {
@@ -188,7 +189,8 @@ caption {
 }
 
 th {
-  text-align: inherit;
+    text-align: inherit;
+    color: #F3AC3C;
 }
 
 label {
